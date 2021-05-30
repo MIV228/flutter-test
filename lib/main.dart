@@ -1,8 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-//Функция main
 main() => runApp(
-      //Функция для запуска Flutter
       Directionality(
         textDirection: TextDirection.ltr, //Направление текста
         child: Container(
