@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 main() => runApp(
       Directionality(
@@ -26,6 +27,12 @@ class _MyApp extends StatefulWidget {
     return Center(
       child: GestureDetector(
         onTap: () {
+          const url = 'https://dart.dev';
+          if (canLaunch(url) != null) {
+          launch(url);
+          } else {
+          print('Could not launch $url');
+          }
           ++count;
           print("You pressed me");
         },
