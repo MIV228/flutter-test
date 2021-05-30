@@ -7,18 +7,40 @@ main() => runApp(
         textDirection: TextDirection.ltr, //Направление текста
         child: Container(
           color: Color(0xFF000000),
-          child: Center(
-            child: Text(
-              'Hello, world!', //Текст
-              style: TextStyle(
-                color: Color(0xFF00FF21),
-                fontSize: 32.0,
-              ),
-            ),
-          ),
+          child: MyApp(),
+          // child: Center(
+          //   child: Text(
+          //     'Hello, world!', //Текст
+          //     style: TextStyle(
+          //       color: Color(0xFF00FF21),
+          //       fontSize: 32.0,
+          //     ),
+          //   ),
+          // ),
         ),
       ),
     );
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: GestureDetector(
+        onTap: () {
+          print("You pressed me");
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Color(0xFF00FF21),
+          ),
+          width: 100,
+          height: 100,
+        ),
+      ),
+    );
+  }
+}
 
 // import 'package:flutter/material.dart';
 //
