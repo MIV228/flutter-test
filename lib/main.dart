@@ -7,7 +7,7 @@ main() => runApp(
         textDirection: TextDirection.ltr, //Направление текста
         child: Container(
           color: Color(0xFF000000),
-          child: MyApp(),
+          child: _MyApp(),
           // child: Center(
           //   child: Text(
           //     'Hello, world!', //Текст
@@ -21,12 +21,14 @@ main() => runApp(
       ),
     );
 
-class MyApp extends StatelessWidget {
+class _MyApp extends StatefulWidget {
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
         onTap: () {
+          ++count;
           print("You pressed me");
         },
         child: Container(
@@ -36,9 +38,21 @@ class MyApp extends StatelessWidget {
           ),
           width: 100,
           height: 100,
+          child: Center(
+            child: Text(
+              '$count',
+              style: TextStyle(
+                fontSize: 30.0,
+              ),
+            ),
+          ),
         ),
       ),
     );
+  }
+  @override
+  State<StatefulWidget> createState() {
+    throw UnimplementedError();
   }
 }
 
