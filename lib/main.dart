@@ -1,25 +1,24 @@
 import 'package:flutter/widgets.dart';
 
 //Функция main
-main() => runApp( //Функция для запуска Flutter
-  Directionality(
-      textDirection: TextDirection.ltr, //Направление текста
-
-    child: Center( //Виджет Center
-      child: Text( //Виджет Text
-        'Hello, world!', //Текст
-
+main() => runApp(
+      //Функция для запуска Flutter
+      Directionality(
+        textDirection: TextDirection.ltr, //Направление текста
+        child: Container(
+          color: Color(0xFF000000),
+          child: Center(
+            child: Text(
+              'Hello, world!', //Текст
+              style: TextStyle(
+                color: Color(0xFF00FF21),
+                fontSize: 32.0,
+              ),
+            ),
+          ),
+        ),
       ),
-    ),
-  ),
-);
-
-
-
-
-
-
-
+    );
 
 // import 'package:flutter/material.dart';
 //
