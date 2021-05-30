@@ -2,10 +2,14 @@ import 'package:flutter/widgets.dart';
 
 //Функция main
 main() => runApp( //Функция для запуска Flutter
-  Center( //Виджет Center
-    child: Text( //Виджет Text
-      'Hello, world!', //Текст
+  Directionality(
       textDirection: TextDirection.ltr, //Направление текста
+
+    child: Center( //Виджет Center
+      child: Text( //Виджет Text
+        'Hello, world!', //Текст
+
+      ),
     ),
   ),
 );
